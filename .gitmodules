@@ -1,0 +1,6 @@
+[submodule "src/lvgl"]
+	path = src/lvgl
+	url = https://github.com/lvgl/lvgl.git
+[submodule "src/Arm-2D"]
+	path = src/Arm-2D
+	url = https://github.com/ARM-software/Arm-2D.git
