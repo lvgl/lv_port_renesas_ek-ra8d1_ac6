@@ -1,15 +1,13 @@
 #include <LVGL_thread.h>
-#include "lvgl.h"
-#include "port/lv_port_disp.h"
-#include "port/lv_port_indev.h"
+#include "board_init.h"
 #include "lvgl/demos/lv_demos.h"
-#include "ospi_main.h"
 
 
 static uint32_t idle_time_sum;
 static uint32_t non_idle_time_sum;
 static uint32_t task_switch_timestamp;
 static bool idle_task_running;
+
 
 void lv_freertos_task_switch_in(const char * name)
 {
@@ -60,15 +58,9 @@ void LVGL_thread_entry(void *pvParameters)
     FSP_PARAMETER_NOT_USED (pvParameters);
     fsp_err_t err;
 
-#ifdef USE_OSPI
-    init_ospi();
-#endif
-
     lv_init();
 
-    lv_port_disp_init();
-
-    lv_port_indev_init();
+    board_init();
 
 #if (1 == LV_USE_DEMO_BENCHMARK)
     lv_demo_benchmark();
