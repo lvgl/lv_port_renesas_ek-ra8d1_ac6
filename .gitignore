@@ -22,3 +22,4 @@ ra/fsp/src/bsp/mcu/all/*
 src/lvgl/*
 
 /JLinkLog.log
+/build/
