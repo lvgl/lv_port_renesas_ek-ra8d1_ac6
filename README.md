@@ -44,7 +44,7 @@ You can purchase the Renesas EK-RA8D1 board from many distributors. See the sour
 
 ### Software setup
 - Add Ac6
-    - Download and install the **Ac6** compiler from from [Arm's website](https://github.com/ARM-software/LLVM-embedded-toolchain-for-Arm/releases/tag/release-17.0.1)
+    - Download and install the **Ac6** compiler from from [Arm's website](https://developer.arm.com/Tools%20and%20Software/Arm%20Compiler%20for%20Embedded)
     - To register a community license go to `bin` folder of the compiler and in a Terminal run `armlm.exe activate -server https://mdk-preview.keil.arm.com -product KEMDK-COM0`
     - In E2 Studio open `Window` -> `Preferences`. Select `Toolchains` on the left, click `Add...` and browse the `bin` folder of the Ac6 compiler.
 - Get this project
